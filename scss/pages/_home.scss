@@ -1,0 +1,35 @@
+h1,
+h2,
+h3 {
+  margin: 0;
+
+  &.sm-heading {
+    padding: 0.3rem 1.6rem;
+    margin-bottom: 3.2rem;
+    background: rgba(lighten($primary-color, 2), 0.5);
+  }
+}
+
+main {
+  padding: 6.4rem;
+  height: 100vh;
+
+  .icons {
+    margin-top: 1.6rem;
+
+    a {
+      padding: 0.64rem;
+      &:hover {
+        color: $secondary-color;
+        @include easeOut();
+      }
+    }
+  }
+
+  &#home {
+    overflow: hidden;
+    h1 {
+      margin-top: 20vh;
+    }
+  }
+}
