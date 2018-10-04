@@ -179,17 +179,17 @@ main {
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
-  .about-info .scool-1 {
+  .about-info .school-1 {
     grid-area: school1; }
-  .about-info .scool-2 {
+  .about-info .school-2 {
     grid-area: school2; }
-  .about-info .scool-3 {
+  .about-info .school-3 {
     grid-area: school3; }
-  .about-info .scool-4 {
+  .about-info .school-4 {
     grid-area: school4; }
-  .about-info .scool-5 {
+  .about-info .school-5 {
     grid-area: school5; }
-  .about-info .scool-6 {
+  .about-info .school-6 {
     grid-area: school6; }
   .about-info .school {
     background: #515151;
@@ -212,11 +212,18 @@ main {
       transition: all 0.5s ease-out; }
 
 .boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-areas: 'email telephone address';
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   margin-top: 1rem; }
+  .boxes .email {
+    grid-area: email; }
+  .boxes .telephone {
+    grid-area: telephone; }
+  .boxes .address {
+    grid-area: address; }
   .boxes div {
     font-size: 2rem;
     border: 3px #fff solid;
@@ -258,6 +265,11 @@ main {
   .work-info {
     grid-template-columns: repeat(4, 1fr); } }
 
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .boxes {
+    grid-template-areas: 'email' 'telephone' 'address';
+    grid-template-columns: 1fr; } }
+
 @media screen and (max-width: 768px) {
   main {
     align-items: center;
@@ -288,7 +300,10 @@ main {
     grid-template-areas: 'bioimage' 'bio' 'school1' 'school2' 'school3' 'school4' 'school5' 'school6';
     grid-template-columns: 1fr; }
   .work-info {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  .boxes {
+    grid-template-areas: 'email' 'telephone' 'address';
+    grid-template-columns: 1fr; } }
 
 @media screen and (max-width: 500px) {
   main {
@@ -298,5 +313,8 @@ main {
     main .lg-heading {
       margin-top: 1rem;
       font-size: 5rem; }
-  .work-info {
-    grid-template-columns: 1fr; } }
+    main .work-info {
+      grid-template-columns: 1fr; }
+    main .boxes {
+      grid-template-areas: 'email' 'telephone' 'address';
+      grid-template-columns: 1fr; } }
