@@ -48,6 +48,13 @@
           $color-tertiary-dark
         );
       }
+      &-4 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        );
+      }
     }
   }
 
@@ -128,6 +135,25 @@
           url(../img/work/work3.jpeg);
       }
     }
+    &--4 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        ),
+        url(../img/work/work4.jpeg);
+
+      @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+        only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+        only screen and (min-width: 125em) {
+        background-image: linear-gradient(
+            to right bottom,
+            $color-tertiary-light,
+            $color-tertiary-dark
+          ),
+          url(../img/work/work4.jpeg);
+      }
+    }
   }
 
   &__heading {
@@ -164,6 +190,13 @@
     }
 
     &--3 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-tertiary-light, 0.85),
+        rgba($color-tertiary-dark, 0.85)
+      );
+    }
+    &--4 {
       background-image: linear-gradient(
         to right bottom,
         rgba($color-tertiary-light, 0.85),
