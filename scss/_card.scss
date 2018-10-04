@@ -51,8 +51,8 @@
       &-4 {
         background-image: linear-gradient(
           to right bottom,
-          $color-tertiary-light,
-          $color-tertiary-dark
+          $secondary-light-color,
+          $secondary-color
         );
       }
     }
@@ -138,8 +138,8 @@
     &--4 {
       background-image: linear-gradient(
           to right bottom,
-          $color-tertiary-light,
-          $color-tertiary-dark
+          $secondary-light-color,
+          $secondary-color
         ),
         url(../img/work/work4.jpeg);
 
@@ -148,8 +148,8 @@
         only screen and (min-width: 125em) {
         background-image: linear-gradient(
             to right bottom,
-            $color-tertiary-light,
-            $color-tertiary-dark
+            $secondary-light-color,
+            $secondary-color
           ),
           url(../img/work/work4.jpeg);
       }
@@ -199,8 +199,8 @@
     &--4 {
       background-image: linear-gradient(
         to right bottom,
-        rgba($color-tertiary-light, 0.85),
-        rgba($color-tertiary-dark, 0.85)
+        rgba($secondary-light-color, 0.85),
+        rgba($secondary-color, 0.85)
       );
     }
   }
