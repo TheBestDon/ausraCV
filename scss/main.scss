@@ -1,6 +1,7 @@
 @import 'config';
 @import 'menu';
 @import 'card';
+@import 'table';
 
 * {
   box-sizing: border-box;
@@ -190,6 +191,47 @@ main {
   @extend .btn;
   background: lighten($primary-color, 50);
   color: #333;
+}
+
+.languages {
+  display: flex;
+  margin: 2rem;
+
+  .italian {
+    width: 33.33333vw;
+    display: flex;
+    flex-flow: column;
+
+    .language-name {
+      padding-left: 30%;
+    }
+  }
+  .english {
+    height: 60vh;
+    width: 33.333333vw;
+    display: flex;
+    flex-flow: column;
+  }
+  .russian {
+    height: 60vh;
+    width: 33.333333vw;
+    display: flex;
+    flex-flow: column;
+
+    .language-name {
+      padding-left: 30%;
+    }
+  }
+  .language-name {
+    padding-left: 25%;
+    text-transform: uppercase;
+    margin-top: 20px;
+    color: #f90b6d;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 34px;
+    font-weight: 300;
+    line-height: 40px;
+  }
 }
 
 #main-footer {

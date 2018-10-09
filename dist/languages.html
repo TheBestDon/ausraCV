@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Kalbos ir gebėjimai</title>
+</head>
+
+<body>
+  <header>
+    <div class="menu-btn">
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+    </div>
+    <nav class="menu">
+      <div class="menu-branding">
+        <div class="portrait"></div>
+      </div>
+      <ul class="menu-nav">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Pradžia</a>
+        </li>
+        <li class="nav-item">
+          <a href="education.html" class="nav-link">Išsilavinimas</a>
+        </li>
+        <li class="nav-item">
+          <a href="experience.html" class="nav-link">Patirtis</a>
+        </li>
+        <li class="nav-item current">
+          <a href="languages.html" class="nav-link">Kalbos ir gebėjimai</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">Kontaktai</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main id="languages">
+    <h1 class="lg-heading">
+      Mano
+      <span class="text-secondary">Kalbos</span>
+    </h1>
+    <h2 class="sm-heading">
+      Kalbos, kuriomis kalbu
+    </h2>
+    <div class="languages">
+      <div class="italian">
+        <canvas id="myChart1"></canvas>
+        <h3 class="language-name">Italų - puikiai</h3>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Lygis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Klausymas</td>
+              <td>C2</td>
+            </tr>
+            <tr>
+              <td>Skaitymas</td>
+              <td>C2</td>
+            </tr>
+            <tr>
+              <td>Bendravimas žodžiu</td>
+              <td>C2</td>
+            </tr>
+            <tr>
+              <td>Informacijos pateikimas</td>
+              <td>C2</td>
+            </tr>
+            <tr>
+              <td>Rašymas</td>
+              <td>C2</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="english">
+        <canvas id="myChart2"></canvas>
+        <h3 class="language-name">Anglų - labai gerai</h3>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Lygis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Klausymas</td>
+              <td>C1</td>
+            </tr>
+            <tr>
+              <td>Skaitymas</td>
+              <td>C1</td>
+            </tr>
+            <tr>
+              <td>Bendravimas žodžiu</td>
+              <td>C1</td>
+            </tr>
+            <tr>
+              <td>Informacijos pateikimas</td>
+              <td>C1</td>
+            </tr>
+            <tr>
+              <td>Rašymas</td>
+              <td>C1</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="russian">
+        <canvas id="myChart3"></canvas>
+        <h3 class="language-name">Rusų - gerai</h3>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Lygis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Klausymas</td>
+              <td>B1</td>
+            </tr>
+            <tr>
+              <td>Skaitymas</td>
+              <td>B1</td>
+            </tr>
+            <tr>
+              <td>Bendravimas žodžiu</td>
+              <td>A2</td>
+            </tr>
+            <tr>
+              <td>Informacijos pateikimas</td>
+              <td>A2</td>
+            </tr>
+            <tr>
+              <td>Rašymas</td>
+              <td>A1</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+
+  <footer id="main-footer">Copyright &copy; 2018</footer>
+  <script src="js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+  <script>
+    var ctx1 = document.getElementById("myChart1");
+    var ctx2 = document.getElementById("myChart2");
+    var ctx3 = document.getElementById("myChart3");
+
+    var myChart1 = new Chart(ctx1, {
+      "type": "doughnut",
+      "data": {
+        "datasets": [{
+          "data": [100],
+          "backgroundColor": [
+            "rgb(238, 206, 26)"
+          ]
+        }]
+      },
+      "options": {
+        "cutoutPercentage": 60,
+        "tooltips": false
+      }
+    });
+
+    var myChart2 = new Chart(ctx2, {
+      "type": "doughnut",
+      "data": {
+        "datasets": [{
+          "data": [90, 10],
+          "backgroundColor": [
+            "rgb(238, 206, 26)",
+            "rgb(255, 99, 132)"
+          ]
+        }]
+      },
+      "options": {
+        "cutoutPercentage": 60,
+        "tooltips": false
+      }
+    });
+
+    var myChart3 = new Chart(ctx3, {
+      "type": "doughnut",
+      "data": {
+        "datasets": [{
+          "data": [70, 30],
+          "backgroundColor": [
+            "rgb(238, 206, 26)",
+            "rgb(255, 99, 132)"
+          ]
+        }]
+      },
+      "options": {
+        "cutoutPercentage": 60,
+        "tooltips": false
+      }
+    });
+  </script>
+</body>
+
+</html>
